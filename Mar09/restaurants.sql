@@ -1,0 +1,40 @@
+-- CREATE TABLE restaurants
+-- (
+--     name varchar,
+--     distance float,
+--     stars float,
+--     category varchar,
+--     favorite_dish varchar,
+--     takeout boolean,
+--     last_time date
+-- )
+-- INSERT INTO restaurants
+-- VALUES
+--     ('TGI FRIDAYS', 30, 2.5, 'TRADITIONAL AMERICAN', 'WHISKEY GLAZED RIBS', TRUE, '2020-01-01'),
+--     ('OLIVE GARDEN', 10, 3.5, 'ITALIAN', 'CHICKEN ALFREDO', TRUE, '2020-02-02');
+-- ALTER TABLE restaurants ADD id SERIAL NOT NULL PRIMARY KEY; 
+-- INSERT INTO restaurants
+-- VALUES
+--     ('JINYA', 16, 4.5, 'JAPANESE', 'WONTON RAMEN', TRUE, '2020-02-11'),
+--     ('DENNYS', 1.4, 2.0, 'DINER', 'NACHOS', FALSE, '2019-11-12'),
+--     ('TAQUERIA DEL SOL', 23, 4.0, 'MEXICAAN', 'GORDITAS', TRUE, '2019-08-11'),
+--     ('888', 29, 4.0, 'CHINESE', 'ORANGE CHICKEN', FALSE, '2019-12-23');
+
+-- INSERT INTO restaurants
+-- VALUES
+--     ('GRINGOS', 26, 5.0, 'TEX-MEX', 'ENCHILADAS', TRUE, '2019-07-21'),
+--     ('GLORIAS', 14, 5.0, 'LATIN', 'CHICKEN', FALSE, '2019-10-02');
+
+--1. The names of the restaurants that you gave a 5 stars to:
+-- SELECT name
+-- FROM restaurants
+-- WHERE stars = 5.0;
+--2. The favorite dishes of all 5-star restaurants
+-- SELECT favorite_dish
+-- FROM restaurants
+-- WHERE stars = 5.0;
+--3. The the id of a restaurant by a specific restaurant name, say 'Moon Tower'
+-- SELECT id
+-- FROM restaurants
+-- WHERE name = '888';
+--4. restaurants in the category of 'BBQ'
