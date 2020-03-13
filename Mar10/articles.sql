@@ -32,24 +32,38 @@
 --     (DEFAULT, 'Orisa'),
 --     (DEFAULT, 'Wrecking Ball');
 
-INSERT INTO articles
-VALUES
-    (DEFAULT, 'CHEERS, LOVE! THE CAVALRYS HERE', 1),
-    (DEFAULT, 'OUR WORLD IS WORTH FIGHTING FOR', 2),
-    (DEFAULT, 'ONE SHOT, ONE KILL', 3),
-    (DEFAULT, 'HEROES NEVER DIE', 4),
-    (DEFAULT, 'WE ARE ALL SOLDIERS NOW', 5),
-    (DEFAULT, 'DEATH WALKS AMONG YOU', 6),
-    (DEFAULT, 'IMAGINATION IS THE ESSENCE OF DISCOVERY', 7),
-    (DEFAULT, 'I PLAY TO WIN', 8),
-    (DEFAULT, 'THE TRUE ENEMY OF HUMANITY IS DISORDER', 9),
-    (DEFAULT, 'TOGETHER WE ARE STRONG', 10),
-    (DEFAULT, 'I WILL PROVE MYSELF!', 11),
-    (DEFAULT, '@!$#@#^', 12),
-    (DEFAULT, 'EVERYONE MUST FIND THEIR CAUSE', 13),
-    (DEFAULT, 'TRUE SELF IS WITHOUT FORM', 14),
-    (DEFAULT, 'SCIENCE WILL REVEAL THE TRUTH', 15),
-    (DEFAULT, 'JUSTICE WILL BE DONE', 16),
-    (DEFAULT, 'YOUR SAFETY IS MY PRIMARY CONCERN', 17),
-    (DEFAULT, 'DO NOT ANGER THE HAMSTER', 18),
-    (DEFAULT, 'QUAD CANNONS', 18);
+-- INSERT INTO articles
+-- VALUES
+--     (DEFAULT, 'CHEERS, LOVE! THE CAVALRYS HERE', 1),
+--     (DEFAULT, 'OUR WORLD IS WORTH FIGHTING FOR', 2),
+--     (DEFAULT, 'ONE SHOT, ONE KILL', 3),
+--     (DEFAULT, 'HEROES NEVER DIE', 4),
+--     (DEFAULT, 'WE ARE ALL SOLDIERS NOW', 5),
+--     (DEFAULT, 'DEATH WALKS AMONG YOU', 6),
+--     (DEFAULT, 'IMAGINATION IS THE ESSENCE OF DISCOVERY', 7),
+--     (DEFAULT, 'I PLAY TO WIN', 8),
+--     (DEFAULT, 'THE TRUE ENEMY OF HUMANITY IS DISORDER', 9),
+--     (DEFAULT, 'TOGETHER WE ARE STRONG', 10),
+--     (DEFAULT, 'I WILL PROVE MYSELF!', 11),
+--     (DEFAULT, '@!$#@#^', 12),
+--     (DEFAULT, 'EVERYONE MUST FIND THEIR CAUSE', 13),
+--     (DEFAULT, 'TRUE SELF IS WITHOUT FORM', 14),
+--     (DEFAULT, 'SCIENCE WILL REVEAL THE TRUTH', 15),
+--     (DEFAULT, 'JUSTICE WILL BE DONE', 16),
+--     (DEFAULT, 'YOUR SAFETY IS MY PRIMARY CONCERN', 17),
+--     (DEFAULT, 'DO NOT ANGER THE HAMSTER', 18),
+--     (DEFAULT, 'QUAD CANNONS', 18);
+
+-- SELECT author.id as authorID, name, title
+-- FROM author INNER JOIN articles ON author.id = articles.author_id ;
+-- SELECT author.id as authorID, name, title, count(articles.id)
+-- FROM author INNER JOIN articles ON author.id = articles.author_id ;
+
+-- SELECT author.id, name, title
+-- FROM author INNER JOIN articles ON author.id = articles.author_id
+-- WHERE author.id = 18
+-- SELECT author.id, name, title
+-- FROM author LEFT OUTER JOIN articles ON author.id = articles.author_id;
+-- SELECT author.id, name, title
+-- FROM author FULL OUTER JOIN articles ON author.id = articles.author_id;
+
