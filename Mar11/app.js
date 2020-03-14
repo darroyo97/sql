@@ -8,7 +8,7 @@ let initOptions = {
 let config = {
     host: 'localhost',
     port: 5432,
-    database: 'restaurants',
+    database: 'testdb',
     user: 'postgres'
 }
 
