@@ -19,7 +19,22 @@ let db = pgp(config);
 
 // console.log(db)
 
-db.query("SELECT * FROM restaurants WHERE category='LATIN'")
+// db.query("SELECT * FROM restaurants WHERE category='LATIN'")
+//     .then((results) => {
+//         console.log(results)
+//     })
+// db.result("INSERT INTO pgpromise VALUES (DEFAULT,'Jasso', 'Dallas' );")
+//     .then((result) => {
+//         console.log(result)
+//     })
+// db.none("INSERT INTO pgpromise VALUES (DEFAULT,'Bambam', 'Las Vegas' );")
+//     .then(() => {
+//         console.log('record was insterted')
+//     })
+db.query("SELECT * FROM pgpromise")
     .then((results) => {
-        console.log(results)
+        results.forEach((person) => {
+            console.log(`Good morning ${person.name}`)
+        })
+        // console.log(results)
     })
