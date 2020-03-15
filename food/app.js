@@ -1,20 +1,14 @@
 const express = require('express');
 const app = express();
+let PORT = 3000;
+
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-app.listen(3000, () => {
-    console.log('listening on port 3000')
+app.listen(PORT, () => {
+    console.log(`LISTENING ON PORT ${PORT}`)
 })
