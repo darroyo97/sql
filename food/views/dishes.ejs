@@ -8,7 +8,15 @@
 </head>
 
 <body>
+
+    <a href="/newdish">Back to newdish</a>
     Dishes
+    <% dishes.forEach(record => { %>
+    <h1> <%= record.name %></h1>
+    <h2> <%= record.description %> </h2>
+    <h3> <%= record.price %> </h3>
+    <img height="120px" src="<%= record.imageurl %>" alt="">
+    <% }) %>
 </body>
 
 </html>
