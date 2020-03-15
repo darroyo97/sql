@@ -8,3 +8,4 @@
 --     city varchar
 -- (20)
 -- );
+-- SELECT * FROM test WHERE name = 'Veronica'; SELECT --'

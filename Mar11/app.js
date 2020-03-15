@@ -38,12 +38,16 @@ let db = pgp(config);
 //         })
 //         // console.log(results)
 //     })
-db.one("INSERT INTO pgpromise VALUES (DEFAULT,'Jovers', 'New York' ) RETURNING id")
+// db.one("INSERT INTO pgpromise VALUES (DEFAULT,'Jovers', 'New York' ) RETURNING id")
+//     .then((result) => {
+//         console.log(result)
+//         db.query(`SELECT * FROM pgpromise WHERE ID =${result.id}`)
+//             .then((results) => {
+//                 console.log(`return from query`)
+//             })
+//         console.log('record was insterted')
+//     })
+db.result("INSERT INTO pgpromise VALUES (DEFAULT, $1, $2)", ['Richard', 'Atlanta'])
     .then((result) => {
         console.log(result)
-        db.query(`SELECT * FROM pgpromise WHERE ID =${result.id}`)
-            .then((results) => {
-                console.log(`return from query`)
-            })
-        console.log('record was insterted')
     })
