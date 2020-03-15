@@ -47,7 +47,13 @@ let db = pgp(config);
 //             })
 //         console.log('record was insterted')
 //     })
-db.result("INSERT INTO pgpromise VALUES (DEFAULT, $1, $2)", ['Richard', 'Atlanta'])
+// db.result("INSERT INTO pgpromise VALUES (DEFAULT, $1, $2)", ['Richard', 'Atlanta'])
+//     .then((result) => {
+//         console.log(result)
+//     })
+let firstName = 'Firulais';
+let city = 'Mexico';
+db.result("INSERT INTO pgpromise VALUES (DEFAULT, $1, $2)", [firstName, city])
     .then((result) => {
         console.log(result)
     })
